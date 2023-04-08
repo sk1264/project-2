@@ -10,12 +10,12 @@ This app will be designed to track works of art at various museums or shows arou
 7. Nodemon
 8. MongoDB
 9. Mongoose
-#MVP
+# MVP
 1. Create index/landing page where user can see all posts of art.
 2. Create a form for user to log a new piece of artwork.
 3. Allow the ability to edit or delete a post.
 4. Style with CSS.
-#Stretch Goals
+# Stretch Goals
 1. Incorporate ability to upload your own photo, not just a URL image.
 2. Extensively style with CSS.
 # User Stories
