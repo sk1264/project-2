@@ -4,14 +4,16 @@ const express = require('express');
 const morgan = require('morgan'); 
 const methodOverride = require('method-override');
 const app = express();
+const PORT = 3000;
+
 
 /////////////////////////////////////////////////////
 // Middleware  req => middleware => res
 /////////////////////////////////////////////////////
-app.use(morgan("tiny")) 
-app.use(methodOverride("_method")) 
-app.use(express.urlencoded({extended: true})) 
-app.use(express.static("public")) 
+app.use(morgan("tiny")); 
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({extended: true}));
+app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     res.send('default route')
