@@ -19,4 +19,10 @@ This app will be designed to track works of art at various museums or shows arou
 <img width="804" alt="Screenshot 2023-04-06 at 7 31 17 PM" src="https://user-images.githubusercontent.com/123710081/230512095-b919c70e-68df-4c50-8e45-e053a1132e52.png">
 
 ![Screenshot 2023-04-06 at 7 42 01 PM (2)](https://user-images.githubusercontent.com/123710081/230513052-56517dcb-17ae-410c-9ae7-2e1ede80e6ed.png)
-# Code Snippet
+# Code Snippet for Models
+
+    name: String,
+    location: String, 
+    image: String,
+    review: String,
+    rating: Number
