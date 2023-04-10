@@ -4,8 +4,7 @@
     <body>
         <%- include("../partials/header.ejs") %>
     <main>
-        <div>   
-           <a href="/arts/new"><button>Log new art</button></a>
+        <div>  
            <% for (art of art) { %>
                <article>
                    <a href="/arts/<%= art._id %>">
@@ -15,6 +14,7 @@
                    </a>
                </article>
                <% } %>
+               <a href="/arts/new"><button>Log new art</button></a>
        </div>
    </main>
 </body>
