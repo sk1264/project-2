@@ -42,6 +42,15 @@ router.get('/:id', async (req, res) => {
 	res.render("arts/show.ejs", {art})
 });
 
+// Update
+router.put('/:id', async (req, res) => {
+	const id = req.params.id;
+	const art = await Art.findByIdAndUpdate(id, req.body, {
+		new: true,
+	});
+	res.redirect('/arts');
+});
+
 // Delete
 router.delete('/:id', async (req, res) => {
 	const art = await Art.findByIdAndDelete(req.params.id);

@@ -12,15 +12,15 @@
                         <h3>
                             <%= art.location %>
                         </h3>
-                        <h4>
-                            <%= art.image %>
-                        </h4>
-                        <h5>
+                        <h3>
+                            <%= art.url %>
+                        </h3>
+                        <h3>
                             <%= art.review %>
-                        </h5>
-                        <h6>
+                        </h3>
+                        <h3>
                             <%= art.rating %>
-                        </h6>
+                        </h3>
                         <a href="/arts/<%= art._id %>/edit"><button>Edit</button></a>
                         <form action="/arts/<%= art._id %>?_method=DELETE" method="POST">
                             <input type="submit" value="Delete" />
