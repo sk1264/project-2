@@ -4,6 +4,11 @@ const express = require('express');
 const morgan = require('morgan'); 
 const methodOverride = require('method-override');
 const app = express();
+const emoji = require('node-emoji');
+const { log } = console;
+// const pizza = emoji.get('pizza');
+// log(pizza);
+
 
 
 
