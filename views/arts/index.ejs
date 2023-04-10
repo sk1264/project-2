@@ -8,9 +8,9 @@
            <% for (art of art) { %>
                <article>
                    <a href="/arts/<%= art._id %>">
-                       <h2>
+                       <h5>
                            <%= art.name %> - <%= art.location %> <%= art.url %> - <%-art.rating %>
-                       </h2>
+                       </h5>
                    </a>
                </article>
                <% } %>
