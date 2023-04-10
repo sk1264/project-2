@@ -10,7 +10,7 @@ This app will be designed to track works of art at various museums or shows arou
 7. Nodemon
 8. MongoDB
 9. Mongoose
-10. Render.com
+10. Render.com (https://art-tracking-app.onrender.com/arts/)
 # MVP
 1. Create index/landing page where user can see all posts of art.
 2. Create a form for user to log a new piece of artwork.
