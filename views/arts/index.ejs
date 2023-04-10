@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-
     <body>
         <%- include("../partials/header.ejs") %>
-        <!-- add main element -->
-            <main>
-                <!-- add div -->
-                 <div>   
+    <main>
+        <div>   
+           <a href="/arts/new"><button>Log new art</button></a>
+           <% for (art of art) { %>
+               <article>
+                   <a href="/arts/<%= art._id %>">
+                       <h2>
+                           <%= art.name %> %>
+                       </h2>
+                   </a>
+               </article>
+               <% } %>
+       </div>
+   </main>
+</body>
+</html>

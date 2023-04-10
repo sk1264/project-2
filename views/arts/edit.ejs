@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <div>
+                    <form action="/arts/<%= art._id %>?_method=PUT" method="post">
+                        <fieldset>
+                            <legend>Edit the <%= art.name %>
+                            </legend>
+                            <label>
+                                NAME:<input type="text" name="name" value="<%= art.name %>" placeholder="enter art name" />
+                            </label>
+                            <label>
+                                LOCATION:<input type="text" name="location" value="<%= art.location %>" placeholder="enter art location" />
+                            </label>
+                            <label>
+                                IMAGE:<input type="file" name="image" value="<%= art.image %>" placeholder="upload image here" />
+                            </label>
+                            <label>
+                                REVIEW:<input type="text" name="review" value="<%= art.review %>" placeholder="enter art review" />
+                            </label>
+                            <label>
+                                RATING:<input type="number" name="rating" value="<%= art.rating %>" placeholder="1-5" />
+                            </label>
+                        </fieldset>
+                        <input type="submit" value="Update <%= art.name %>" />
+                    </form>
+                </div>
+            </main>
+    </body>
+</html>

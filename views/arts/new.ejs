@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <div>
+                    <form action="/arts" method="post">
+                        <fieldset>
+                            <legend>Log a new piece of artwork</legend>
+                            <label>
+                                NAME:<input type="text" name="name" placeholder="artwork name" />
+                            </label>
+                            <label>
+                                LOCATION:<input type="text" name="location" placeholder="enter location of artwork" />
+                            </label>
+                            <label>
+                                IMAGE:<input type="file" name="image" placeholder="upload image" />
+                            </label>
+                            <label>
+                                REVIEW:<input type="text" name="review" placeholder="describe artwork here" />
+                            </label>
+                            <label>
+                                RATING:<input type="number" name="rating" placeholder="1-5" />
+                            </label>
+                        </fieldset>
+                        <input type="submit" value="log new artwork" />
+                    </form>
+                </div>
+            </main>
+    </body>
+</html>

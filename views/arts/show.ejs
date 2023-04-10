@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <div>
+                    <article>
+                        <h2>
+                            <%= art.name %>
+                        </h2>
+                        <h3>
+                            <%= art.location %>
+                        </h3>
+                        <h4>
+                            <%= art.image %>
+                        </h4>
+                        <h5>
+                            <%= art.review %>
+                        </h5>
+                        <h6>
+                            <%= art.rating %>
+                        </h6>
+                        <a href="/arts/<%= art._id %>/edit"><button>Edit</button></a>
+                        <form action="/arts/<%= art._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete" />
+                        </form>
+                        <a href="/arts/"><button>Back to Main</button></a>
+                    </article>
+                </div>
+            </main>
+    </body>
+</html>
