@@ -19,6 +19,7 @@ This app will be designed to track works of art at various museums or shows arou
 # Stretch Goals
 1. Incorporate ability to upload your own photo, not just a URL image.
 2. Extensively style with CSS.
+3. Incorporate ability to use emojis.
 # User Stories
 1. As a user, I will be able to upload my own photos of artwork.
 2. As a user, I will be able to include detailed information of artwork like location, review, and rating.
