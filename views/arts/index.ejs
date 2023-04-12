@@ -8,22 +8,15 @@
             <% for (art of art) { %>
                 <br>
                 <div class="card" style="width: 18rem; text-align:center">
-                <!-- <img src="<%= art.image %>" class="card-img-top" alt="..."> -->
-                <div class="card-body">
-                  <h5 class="card-title"><%= art.name %></h5>
-                  <p class="card-text">
-                    <h6><%= art.location %></h6>
-                    <h6><%= art.review %></p></h6>
+                    <img src="<%= art.image %>" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= art.name %></h5>
+                      <p class="card-text">
+                        <h6><%= art.location %></h6>
+                        <h6><%= art.review %></h6>
                   <a href="/arts/<%= art._id %>" class="btn btn-primary">See details</a>
                 </div>
               </div>
-               <!-- <article>
-                   <a href="/arts/<%= art._id %>">
-                       <h5>
-                           <%= art.name %> - <%= art.location %> <%= art.url %> - <%-art.rating %>
-                       </h5>
-                   </a>
-               </article> -->
                <% } %>
                <br>
                <p style="text-align:center">
