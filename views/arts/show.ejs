@@ -6,26 +6,26 @@
             <main>
                 <div>
                     <article><p style="text-align:center">
-                        <h2>
+                        <h2><p style="text-align:center">
                             <%= art.name %>
                         </h2>
-                        <h3>
+                        <h3><p style="text-align:center">
                             <%= art.location %>
                         </h3>
-                        <h3>
+                        <h3><p style="text-align:center">
                             <img src="<%= art.image %>" class="card-img-top">
                         </h3>
-                        <h3>
+                        <h3><p style="text-align:center">
                             <%= art.review %>
                         </h3>
-                        <h3>
-                            <%= art.rating %>
-                        </h3>
+                        <h3><p style="text-align:center">
+                            RATING (1-5): <%= art.rating %>
+                        </h3><p style="text-align:center">
                         <a href="/arts/<%= art._id %>/edit"><button>Edit</button></a>
                         <form action="/arts/<%= art._id %>?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete" />
+                            <p style="text-align:center"><input type="submit" value="Delete" />
                         </form>
-                        <a href="/arts/"><button>Back to Main</button></a>
+                        <p style="text-align:center"><a href="/arts/"><button>Back to Main</button></a>
                     </article>
                 </div>
             </main>
