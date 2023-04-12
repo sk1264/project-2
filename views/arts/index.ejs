@@ -5,6 +5,7 @@
         <%- include("../partials/header.ejs") %>
     <main>
         <div>
+            <div class="card-container">
             <% for (art of art) { %>
                 <br>
                 <div class="card" style="width: 18rem; text-align:center">
@@ -19,9 +20,9 @@
               </div>
                <% } %>
                <br>
-               <p style="text-align:center">
-               <a href="/arts/new" class="btn btn-primary">Log new art!</a>
        </div>
+       <p style="text-align:center">
+       <a href="/arts/new" class="btn btn-primary">Log new art!</a>
    </main>
 </body>
 </html>
