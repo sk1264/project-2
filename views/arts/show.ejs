@@ -22,8 +22,7 @@
                             RATING (1-5): <%= art.rating %>
                         </h3><p style="text-align:center">
                         <a href="/arts/<%= art._id %>/edit"><button class="btn btn-outline-success" type="submit">Edit</button></a>
-                        <form action="/arts/<%= art._id %>?_method=DELETE" method="POST">
-                            <p style="text-align:center"><input type="submit" value="Delete" />
+                        <form action="/arts/<%= art._id %>?_method=DELETE" method="POST"><p style="text-align:center"><button class="btn btn-outline-success" type="submit">Delete</button>
                         </form>
                         <p style="text-align:center"><a href="/arts/"><button class="btn btn-outline-success" type="submit">Back to Main</button></a>
                     </article>
