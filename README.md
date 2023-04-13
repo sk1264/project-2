@@ -1,4 +1,4 @@
-# Unit 2 Project - Art Sightseeing Tracking App
+# Unit 2 Project - Art Sightseeing Tracking App 🎨
 This app will be designed to track works of art at various museums or shows around the world. Whenever a new piece of art is observed, it will be tracked in the full stack application where the user can input the name of the artwork, a photo, the location where it was seen, their interpretation and opinion of the artwork, and a rating of 1-5.
 # Technologies Used
 1. Javascript
