@@ -11,18 +11,16 @@
                 <div class="card" style="width: 18rem; text-align:center">
                     <img src="<%= art.image %>" class="card-img-top">
                     <div class="card-body">
-                      <h5 class="card-title"><%= art.name %></h5>
+                    <h5 class="card-title"><%= art.name %></h5>
                       <p class="card-text">
-                        <h6><%= art.location %></h6>
-                        <h6><%= art.review %></h6>
+                      <h6><%= art.location %></h6>
+                      <h6><%= art.review %></h6>
                   <a href="/arts/<%= art._id %>" class="btn btn-primary">See details</a>
                 </div>
-              </div>
-               <% } %>
+            </div> <% } %>
                <br>
-       </div>
-       <p style="text-align:center">
-       <a href="/arts/new" class="btn btn-primary">Log new art!</a>
+          </div>
+       <p style="text-align:center"> <a href="/arts/new" class="btn btn-primary">Log new art!</a>
    </main>
 </body>
 </html>
