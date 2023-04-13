@@ -7,25 +7,38 @@
             <main>
                 <div>
                     <form action="/arts" method="post">
-                        <fieldset>
-                            <legend>Log a new piece of artwork</legend>
+                        <fieldset><p style="text-align:center">
+                            <legend>Log a new piece of artwork!</legend>
+                            <br>
+                            <br>
                             <label>
-                                NAME:<input type="text" name="name" placeholder="artwork name" />
+                                <b>NAME: </b><input type="text" name="name" placeholder="artwork name" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                LOCATION:<input type="text" name="location" placeholder="enter location of artwork" />
+                                <b>LOCATION: </b><input type="text" name="location" placeholder="enter location of artwork" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                IMAGE URL: <input type="text" id="image" name="image" placeholder="Enter image URL" />
+                                <b>IMAGE URL: </b><input type="text" id="image" name="image" placeholder="Enter image URL" />
                               </label>
+                              <br>
+                              <br>
                             <label>
-                                REVIEW:<input type="text" name="review" placeholder="describe artwork here" />
+                                <b>REVIEW: </b><input type="text" name="review" placeholder="describe artwork here" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                RATING:<input type="number" name="rating" placeholder="1-5" />
+                                <b>RATING: </b><input type="number" name="rating" placeholder="1-5" />
                             </label>
+                            <br>
+                            <br>
                         </fieldset>
-                        <input type="submit" value="Log new artwork!" />
+                        <p style="text-align:center">
+                            <button class="btn btn-outline-success" type="submit">Submit! &#128525;</button>
                     </form>
                 </div>
             </main>
