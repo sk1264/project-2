@@ -7,25 +7,36 @@
                 <div><p style="text-align:center">
                     <form action="/arts/<%= art._id %>?_method=PUT" method="post">
                         <fieldset>
-                            <legend>Edit the <%= art.name %>
+                            <legend><p style="text-align:center">Edit the <%= art.name %> submission!
                             </legend>
+                            <br>
+                            <br>
                             <label>
-                                NAME:<input type="text" name="name" value="<%= art.name %>" placeholder="enter art name" />
+                                <b>NAME:</b> <input type="text" name="name" value="<%= art.name %>" placeholder="enter art name" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                LOCATION:<input type="text" name="location" value="<%= art.location %>" placeholder="enter art location" />
+                                <b>LOCATION:</b> <input type="text" name="location" value="<%= art.location %>" placeholder="enter art location" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                IMAGE URL:<input type="text" name="image" value="<%= art.image %>" placeholder="enter image URL" />
+                                <b>IMAGE URL:</b> <input type="text" name="image" value="<%= art.image %>" placeholder="enter image URL" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                REVIEW:<input type="text" name="review" value="<%= art.review %>" placeholder="enter art review" />
+                                <b>REVIEW:</b> <input type="text" name="review" value="<%= art.review %>" placeholder="enter art review" />
                             </label>
+                            <br>
+                            <br>
                             <label>
-                                RATING:<input type="number" name="rating" value="<%= art.rating %>" placeholder="1-5" />
+                                <b>RATING: </b><input type="number" name="rating" value="<%= art.rating %>" placeholder="1-5" />
                             </label>
                         </fieldset>
-                        <input type="submit" value="Update <%= art.name %>" />
+                        <p style="text-align:center">
+                        <button class="btn btn-outline-success" type="submit"> Update <%= art.name %></button></a>
                     </form>
                 </div>
             </main>
