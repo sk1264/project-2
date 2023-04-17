@@ -6,12 +6,7 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <div>
-                    <form action="/arts" method="post">
-                        <fieldset><p style="text-align:center">
-                            <legend>Log a new piece of artwork!</legend>
-                            <br>
-                            <br>
-                            <label>
+                            <!-- <label>
                                 <b>NAME: </b><input type="text" name="name" placeholder="Artwork name." />
                             </label>
                             <br>
@@ -40,7 +35,43 @@
                                 <b>RATING &#127775; : </b><input type="number" name="rating" placeholder="Choose between 1 - 5." />
                             </label>
                             <br>
-                            <br>
+                            <br> -->
+                            <form action="/arts" method="post">
+                                <fieldset><p style="text-align:center">
+                                    <legend>Log a new piece of artwork!</legend>
+                                    <br>
+                                    <br>
+                                <p style="text-align:center">
+                                <div class="mb-3" style="width: 18rem; text-align:center">
+                                  <label for="name" class="form-label">NAME: </label>
+                                  <input type="text" name="name" class="form-control" id="text" aria-describedby="text">
+                                  <div id="text" class="form-text">Enter artwork name here.</div>
+                                </div>
+                                <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <label for="location" class="form-label">LOCATION: </label>
+                                    <input type="text" name="location" class="form-control" id="text" aria-describedby="text">
+                                    <div id="text" class="form-text">Enter location here.</div>
+                                  </div>
+                                  <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <label for="artist" class="form-label">ARTIST: </label>
+                                    <input type="text" name="artist" class="form-control" id="text" aria-describedby="text">
+                                    <div id="text" class="form-text">Enter artist name here.</div>
+                                  </div>
+                                  <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <label for="image" class="form-label">IMAGE: </label>
+                                    <input type="text" name="image" class="form-control" id="image" aria-describedby="text">
+                                    <div id="image" class="form-text">Enter image URL here.</div>
+                                  </div>
+                                  <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <label for="review" class="form-label">REVIEW: </label>
+                                    <input type="text" name ="review" class="form-control" id="text" aria-describedby="text">
+                                    <div id="text" class="form-text">Enter review here.</div>
+                                  </div>
+                                  <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <label for="location" class="form-label">RATING &#127775;: </label>
+                                    <input type="number" name="rating" class="form-control" id="text" aria-describedby="text">
+                                    <div id="text" class="form-text">Enter rating here.</div>
+                                  </div>
                         </fieldset>
                         <p style="text-align:center">
                             <button class="btn btn-outline-success" type="submit">Submit! &#128525;</button>

@@ -6,24 +6,24 @@
             <main>
                 <div>
                     <article><p style="text-align:center">
-                        <h2><p style="text-align:center">
+                        <h1><p style="text-align:center">
                             <%= art.name %>
-                        </h2>
-                        <h3><p style="text-align:center">
+                        </h1>
+                        <h4><p style="text-align:center">
                             <%= art.location %>
-                        </h3>
-                        <h3><p style="text-align:center">
+                        </h4>
+                        <h5><p style="text-align:center">
                             <%= art.artist %>
-                        </h3>
+                        </h5>
                         <h3><p style="text-align:center">
                             <img src="<%= art.image %>" class="img-rounded" alt="Cinque Terre" width="60%" height="60%">
                         </h3>
-                        <h3><p style="text-align:center">
+                        <h6><p style="text-align:center">
                             <%= art.review %>
-                        </h3>
-                        <h3><p style="text-align:center">
-                            RATING &#127775; (1-5): <%= art.rating %>
-                        </h3><p style="text-align:center">
+                        </h6>
+                        <h6><p style="text-align:center">
+                            RATING &#127775;: <%= art.rating %>
+                        </h6><p style="text-align:center">
                         <a href="/arts/<%= art._id %>/edit"><button class="btn btn-outline-success" type="submit">Edit</button></a>
                         <form action="/arts/<%= art._id %>?_method=DELETE" method="POST"><p style="text-align:center"><button class="btn btn-outline-success" type="submit">Delete</button>
                         </form>
