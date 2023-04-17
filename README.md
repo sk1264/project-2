@@ -33,6 +33,7 @@ This app will be designed to track works of art at various museums or shows arou
 
     name: String,
     location: String, 
+    artist: String,
     image: String,
     review: String,
     rating: Number
