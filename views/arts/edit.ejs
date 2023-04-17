@@ -7,7 +7,7 @@
                 <div><p style="text-align:center">
                     <form action="/arts/<%= art._id %>?_method=PUT" method="post">
                         <fieldset><p style="text-align:center">
-                                <div class="mb-3" style="width: 18rem; text-align:center">Edit the <%= art.name %> submission!
+                                <div class="mb-3" style="width: 18rem; text-align:center"><b>Edit the <%= art.name %> submission!
                             <br>
                             <br>
                                 <div class="mb-3" style="width: 18rem; text-align:center">
@@ -37,7 +37,7 @@
                             <div class="mb-3" style="width: 18rem; text-align:center">
                                 <label for="location" class="form-label">RATING &#127775;: </label>
                                 <input type="number" name="rating" value="<%= art.rating %>" class="form-control" id="text" aria-describedby="text">
-                                <div id="text" class="form-text">Update rating here.</div>
+                                <div id="text" class="form-text">Update rating here.</div></b>
                               </div>
                         </fieldset>
                         <p style="text-align:center">
