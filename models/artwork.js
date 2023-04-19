@@ -6,9 +6,20 @@ const artsSchema = new mongoose.Schema({
     artist: String,
     image: String,
     review: String,
-    rating: Number
+    rating: Number,
 }, {timestamps: true})
+
+// imageSchema = new mongoose.Schema({
+//     name: String,
+//     desc: String,
+//     img:
+//     {
+//         data: Buffer,
+//         contentType: String
+//     }
+// });
 
 const Art = mongoose.model('Art', artsSchema)
 
+// module.exports = mongoose.model('Image', imageSchema);
 module.exports = Art

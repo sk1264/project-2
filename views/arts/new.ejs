@@ -36,12 +36,12 @@
                             </label>
                             <br>
                             <br> -->
-                            <form action="/arts" method="post">
+                            <form action="/arts" method="post" encType="multipart/form-data">
                                 <fieldset><p style="text-align:center">
                                     <b><legend>Log a new piece of artwork!</legend>
                                     <br>
                                     <br>
-                                <p style="text-align:center">
+                                <input style="text-align:center">
                                 <div class="mb-3" style="width: 18rem; text-align:center">
                                   <label for="name" class="form-label">NAME: </label>
                                   <input type="text" name="name" class="form-control" id="text" aria-describedby="text">
@@ -62,6 +62,23 @@
                                     <input type="text" name="image" class="form-control" id="image" aria-describedby="text">
                                     <div id="image" class="form-text">Enter image URL here.</div>
                                   </div>
+
+                                  <input id="imageUpload" type="file"accept=".jpg, .png, .jpeg" onChange="postImage(event)"/> //----⭐
+                                  <div id="prev"></div>
+                                  <div className="image-upload center">
+                                    <div className="image-upload__preview">
+                                    </div>
+                                  </div>
+                                  //----⭐
+
+                                <input id="userInput" onchange="logValue(e)"/>
+                                  <div class="mb-3" style="width: 18rem; text-align:center">
+                                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                                    <label for="file" class="form-label">OR UPLOAD IMAGE: </label>
+                                    <input type="file" name="file" accept="image/gif, image/jpeg, image/png" name="image" id="file" class="form-control" aria-describedby="text">
+                                    <div id="file" class="form-text">Upload image.</div>
+
+
                                   <div class="mb-3" style="width: 18rem; text-align:center">
                                     <label for="review" class="form-label">REVIEW: </label>
                                     <input type="text" name ="review" class="form-control" id="text" aria-describedby="text">
@@ -78,5 +95,36 @@
                     </form>
                 </div>
             </main>
+            <script>
+             const file = document.getElementById("file");
+const img = document.getElementById("img");
+
+const userInput = document.getElementById("userInput"); //
+
+const postImage = (e) => {
+  console.log(e.target);
+  const formData = new FormData();
+  formData.append("image", e.target.files[0]);
+
+  var myHeaders = new Headers();
+  myHeaders.append("Authorization", "Client-ID 2846195e1594933");
+  myHeaders.append(
+    "Cookie",
+    "IMGURSESSION=2e3b4309e6cf73dbf9d97fd50f391a48; _nc=1"
+  );
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: formData,
+    redirect: "follow",
+  };
+
+  fetch("https://api.imgur.com/3/image/", requestOptions)
+    .then((response) => response.json())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+};
+            </script>
     </body>
 </html>
