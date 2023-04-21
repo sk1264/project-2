@@ -6,42 +6,11 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <div>
-                            <!-- <label>
-                                <b>NAME: </b><input type="text" name="name" placeholder="Artwork name." />
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                <b>LOCATION: </b><input type="text" name="location" placeholder="Enter location of artwork." />
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                <b>ARIST: </b><input type="text" name="artist" placeholder="Enter artist name." />
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                <b>IMAGE URL: </b><input type="text" id="image" name="image" placeholder="Enter image URL." />
-                              </label>
-                              <br>
-                              <br>
-                            <label>
-                                <b>REVIEW: </b><input type="text" name="review" placeholder="Describe artwork here." />
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                <b>RATING &#127775; : </b><input type="number" name="rating" placeholder="Choose between 1 - 5." />
-                            </label>
-                            <br>
-                            <br> -->
-                            <form action="/arts" method="post" encType="multipart/form-data">
+                            <form encType="multipart/form-data">
                                 <fieldset><p style="text-align:center">
                                     <b><legend>Log a new piece of artwork!</legend>
                                     <br>
                                     <br>
-                                <input style="text-align:center">
                                 <div class="mb-3" style="width: 18rem; text-align:center">
                                   <label for="name" class="form-label">NAME: </label>
                                   <input type="text" name="name" class="form-control" id="text" aria-describedby="text">
@@ -63,12 +32,9 @@
                                     <div id="image" class="form-text">Enter image URL here.</div>
                                   </div>
 
-                                  <input id="imageUpload" type="file"accept=".jpg, .png, .jpeg" onChange="postImage(event)"/> //----⭐
-                                  <div id="prev"></div>
-                                  <div className="image-upload center">
-                                    <div className="image-upload__preview">
-                                    </div>
-                                  </div>
+                                  //----⭐
+
+                              <button onclick="handleSubmit(event)">SUBMIT</button>
                                   //----⭐
 
                                 <input id="userInput" onchange="logValue(e)"/>
@@ -93,38 +59,78 @@
                         <p style="text-align:center">
                             <button class="btn btn-outline-success" type="submit">Submit! &#128525;</button>
                     </form>
+
+                    <input
+                    id="imageUpload"
+                    type="file"
+                    accept=".jpg, .png, .jpeg"
+                    onChange="onChangeImageHandler(event)"
+                  />
+                  <img
+                    id="preview"
+                    height="200"
+                    src="https://i.ibb.co/2dtXpf2/blank-avatar.webp"
+                    alt="preview"
+                  />
+
+
+                </div>
                 </div>
             </main>
             <script>
-             const file = document.getElementById("file");
-const img = document.getElementById("img");
+      const preview = document.getElementById("preview");
+      const imageData = document.getElementById("imageUpload");
 
-const userInput = document.getElementById("userInput"); //
 
-const postImage = (e) => {
-  console.log(e.target);
-  const formData = new FormData();
-  formData.append("image", e.target.files[0]);
 
-  var myHeaders = new Headers();
-  myHeaders.append("Authorization", "Client-ID 2846195e1594933");
-  myHeaders.append(
-    "Cookie",
-    "IMGURSESSION=2e3b4309e6cf73dbf9d97fd50f391a48; _nc=1"
-  );
+      //selected image handler
+      const onChangeImageHandler = (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+          // as soon as the file is loaded from machine to browser log the result.
+          const imageData = e.target.result;
+          console.log(reader.result);
+          //   console.log(imageData);
+          preview.src = imageData;
+          //   imageDataInput.value = imageData.split("base64,")[1];
+        };
 
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: formData,
-    redirect: "follow",
-  };
+      };
 
-  fetch("https://api.imgur.com/3/image/", requestOptions)
-    .then((response) => response.json())
-    .then((result) => console.log(result))
-    .catch((error) => console.log("error", error));
-};
+      const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("submitting image");
+
+        const postdata = JSON.stringify({
+          base64string: preview.src.split("base64,")[1],
+          title: "SAMS PROJECT",
+        });
+        console.log(postdata);
+
+        const url = "http://localhost:3000/imageupload";
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            console.log("eventlistener thingyyyyyyyyyy");
+            console.log(this.responseText);
+          }
+        });
+
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("content-type", "application/json");
+
+        xhr.onload = function () {
+          console.log("onload thing happened!!!!!!!!!!");
+        };
+
+        xhr.send(postdata);
+      };
             </script>
     </body>
 </html>
