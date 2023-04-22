@@ -31,20 +31,6 @@
                                     <input type="text" name="image" class="form-control" id="image" aria-describedby="text">
                                     <div id="image" class="form-text">Enter image URL here.</div>
                                   </div>
-<!-- 
-                                  //----⭐
-
-                              <button onclick="handleSubmit(event)">SUBMIT</button>
-                                  //----⭐
-
-                                <input id="userInput" onchange="logValue(e)"/>
-                                  <div class="mb-3" style="width: 18rem; text-align:center">
-                                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
-                                    <label for="file" class="form-label">OR UPLOAD IMAGE: </label>
-                                    <input type="file" name="file" accept="image/gif, image/jpeg, image/png" name="image" id="file" class="form-control" aria-describedby="text">
-                                    <div id="file" class="form-text">Upload image.</div> -->
-
-
                                   <div class="mb-3" style="width: 18rem; text-align:center">
                                     <label for="review" class="form-label">REVIEW: </label>
                                     <input type="text" name ="review" class="form-control" id="text" aria-describedby="text">
@@ -59,78 +45,5 @@
                         <p style="text-align:center">
                             <button class="btn btn-outline-success" type="submit">Submit! &#128525;</button>
                     </form>
-<!-- 
-                    <input
-                    id="imageUpload"
-                    type="file"
-                    accept=".jpg, .png, .jpeg"
-                    onChange="onChangeImageHandler(event)"
-                  />
-                  <img
-                    id="preview"
-                    height="200"
-                    src="https://i.ibb.co/2dtXpf2/blank-avatar.webp"
-                    alt="preview"
-                  />
-
-
-                </div>
-                </div>
-            </main>
-            <script>
-      const preview = document.getElementById("preview");
-      const imageData = document.getElementById("imageUpload");
-
-
-
-      //selected image handler
-      const onChangeImageHandler = (event) => {
-        const file = event.target.files[0];
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (e) {
-          // as soon as the file is loaded from machine to browser log the result.
-          const imageData = e.target.result;
-          console.log(reader.result);
-          //   console.log(imageData);
-          preview.src = imageData;
-          //   imageDataInput.value = imageData.split("base64,")[1];
-        };
-
-      };
-
-      const handleSubmit = (e) => {
-        e.preventDefault();
-
-        console.log("submitting image");
-
-        const postdata = JSON.stringify({
-          base64string: preview.src.split("base64,")[1],
-          title: "SAMS PROJECT",
-        });
-        console.log(postdata);
-
-        const url = "http://localhost:3000/imageupload";
-
-        const xhr = new XMLHttpRequest();
-
-        xhr.addEventListener("readystatechange", function () {
-          if (this.readyState === 4) {
-            console.log("eventlistener thingyyyyyyyyyy");
-            console.log(this.responseText);
-          }
-        });
-
-        xhr.open("POST", url, true);
-
-        xhr.setRequestHeader("content-type", "application/json");
-
-        xhr.onload = function () {
-          console.log("onload thing happened!!!!!!!!!!");
-        };
-
-        xhr.send(postdata);
-      };
-            </script> -->
     </body>
 </html>
