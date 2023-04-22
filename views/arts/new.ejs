@@ -6,11 +6,12 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <div>
-                            <form encType="multipart/form-data">
+                            <form action="/arts" method="post">
                                 <fieldset><p style="text-align:center">
                                     <b><legend>Log a new piece of artwork!</legend>
                                     <br>
                                     <br>
+                                <p style="text-align:center">
                                 <div class="mb-3" style="width: 18rem; text-align:center">
                                   <label for="name" class="form-label">NAME: </label>
                                   <input type="text" name="name" class="form-control" id="text" aria-describedby="text">
@@ -45,5 +46,7 @@
                         <p style="text-align:center">
                             <button class="btn btn-outline-success" type="submit">Submit! &#128525;</button>
                     </form>
+                </div>
+            </main>
     </body>
 </html>
